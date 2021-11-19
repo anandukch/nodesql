@@ -20,10 +20,10 @@ const User = sequelize.define("user", {
     type: Sequelize.STRING,
     allowNull: false,
   },
-  user_image: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
+  // user_image: {
+  //   type: Sequelize.STRING,
+  //   allowNull: false,
+  // },
   total_orders: {
     type: Sequelize.INTEGER,
     allowNull: false,

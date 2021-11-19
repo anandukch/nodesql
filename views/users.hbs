@@ -1,0 +1,19 @@
+<section>
+  
+
+      {{#each users}}
+       
+<div class="card" style="width: 18rem;margin-bottom:12px">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">id: {{this.user_id}}</li>
+    <li class="list-group-item">name: {{this.user_name}}</li>
+    <li class="list-group-item">email: {{this.user_email}}</li>
+    <li class="list-group-item">orders: {{this.total_orders}}</li>
+
+  </ul>
+</div>
+       
+
+      {{/each}}
+    
+</section>
