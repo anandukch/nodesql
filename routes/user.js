@@ -35,6 +35,10 @@ router.get("/", (_, res) => {
     });
 });
 
+router.get('/login',(_,res)=>{
+  res.render('login')
+})
+
 router.post("/login", async (req, res) => {
   let { user_email, user_password } = req.body;
   User.findOne({
@@ -81,7 +85,7 @@ router.post("/insert", async (req, res) => {
         }
       });
 
-      res.send(user);
+      res.json("success");
     })
     .catch((err) => {
       res.send("error" + err);
@@ -110,7 +114,8 @@ router.delete("/delete/:id", (req, res) => {
     },
   })
     .then((user) => {
-      res.json(user);
+      res.json("success");
+
     })
     .catch((err) => {
       res.send("error" + err);
@@ -125,7 +130,8 @@ router.put("/update/:id", auth, (req, res) => {
   })
     .then((user) => {
       console.log(user);
-      res.json(user);
+      res.json("success");
+
     })
     .catch((err) => {
       res.send("error" + err);
