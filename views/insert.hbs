@@ -2,7 +2,7 @@
     <div class="col-md-6 m-auto">
         <div class="conatiner mt-5 pl-5">
             <h2 class="text-center">create account</h2>
-            <form action="/insert" method="POST">
+            <form action="/insert" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="">Name</label>
                     <input type="text" class="form-control" name="user_name" placeholder="enter name">
@@ -19,6 +19,7 @@
                     <label for="">Password</label>
                     <input type="password" class="form-control" name="user_password" placeholder="enter password">
                 </div>
+                 <input type="file" class="form-control" name="user_image" onchange="viewImage(event)" required/>
                 <a href="/login">already have an account</a>
                 <button type="submit" class="btn btn-primary float-right">insert user</button>
             </form>
